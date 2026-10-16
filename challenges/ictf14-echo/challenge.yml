@@ -1,0 +1,38 @@
+name: echo
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2014-2015 — Large-scale Hacking**
+
+
+  echo was the only new service introduced for ictf14 — all other 41 services
+  were reused from prior iCTF editions (ictf04 through ictf13). A simple TCP echo
+  backdoor service authored by Fish Wang. The competition announcement teased it as
+  "Your iCTF experience starts here!" Port 9148.
+
+
+  The competition (April 2015) had a novel format: teams received encrypted
+  VirtualBox VMs and submitted exploits to organizers. No direct inter-team attacking.
+  88 teams; winner SpamAndHex.
+
+
+  Source not available in archive.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+port: 9148
+connection_info: null
+healthcheck: null
+flags:
+- ictf2014{echo_pwned}
+files: []
+topics: []
+tags:
+- binary
+- pwn
+- ictf2014
+- historical
+- attack-defense
+version: '0.1'
