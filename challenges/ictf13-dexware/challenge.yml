@@ -1,0 +1,31 @@
+name: dexware
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2013 — Nuke ''em (or duck and cover!)**
+
+
+  dexware was a Level 3 service — one of the hardest in the competition.
+
+  Teams needed advanced binary exploitation skills to compromise it.
+
+
+  Source not available in archive.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2013{dexware_pwned}
+files: []
+topics: []
+tags:
+- binary
+- pwn
+- ictf2013
+- historical
+- attack-defense
+version: '0.1'

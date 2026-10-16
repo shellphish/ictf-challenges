@@ -1,0 +1,24 @@
+name: ai_lock
+author: iCTF 2023 organizers
+category: reverse engineering
+description: 'Smartest lock in the world! Now powered with AI and Arduino!
+
+  '
+value: 500
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{TinyML_is_c00l_but_AVR_hmm}
+files: []
+topics:
+- Reversing
+- AVR
+tags:
+- Reversing
+- AVR
+- historical
+- attack-defense
+version: '0.1'

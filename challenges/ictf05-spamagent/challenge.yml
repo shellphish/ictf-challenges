@@ -1,0 +1,41 @@
+name: 'Spam World: Spam Agent'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2005 — The Spam Museum: Spam Agent**
+
+
+  A C daemon implementing an XML-based agent scripting engine. POST XML to
+
+  `/~spamagent/spamagent.html` with `<sender>` (user/password) and `<code>`
+
+  (Tcl-like commands). The `store get flag` command retrieves the stored flag;
+
+  `results set $val` returns output. C source available (24KB, autotools package).
+
+  Vulnerability: code injection through `<code>` — the interpreter may allow
+
+  reading any user''s `store` keys regardless of sender credentials.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{spamagent_pwned}
+files: []
+topics:
+- code injection
+- XML
+- C daemon
+- scripting engine
+tags:
+- web
+- c
+- xml
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

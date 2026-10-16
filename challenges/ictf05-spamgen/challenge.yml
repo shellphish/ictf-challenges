@@ -1,0 +1,40 @@
+name: 'Spam World: Spamgen'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2005 — The Spam Museum: Spamgen**
+
+
+  A Python CGI spam generator using a 2nd-order Markov model. Flags are uploaded
+
+  with a random username and fixed password `"miconsenta"` (stored in `user_db/<hash>`).
+
+  Critical vulnerability: `?action=generate` calls `mtext()` which reads ALL files
+
+  in `user_db/` to train the Markov model — every stored flag leaks into the
+
+  generated spam text. The custom `myhash()` is also deterministic/invertible,
+
+  enabling targeted reads. Source code fully available.
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{spamgen_pwned}
+files: []
+topics:
+- information disclosure
+- Python CGI
+- weak hash function
+tags:
+- web
+- python
+- cgi
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

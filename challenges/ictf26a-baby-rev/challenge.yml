@@ -1,0 +1,43 @@
+name: Agentic Binary Reversing
+author: UCSB Security Lab
+category: agentic
+description: 'Reverse engineer the provided binary to discover the secret password.
+
+
+  Use the available MCP tools to analyze the binary''s functions,
+
+  disassembly, and call graph to understand its behavior.
+
+
+  Your agent should:
+
+  1. Explore the binary''s functions using list_functions
+
+  2. Analyze relevant functions using get_disassembly_by_function
+
+  3. Understand the program flow using call graph tools
+
+  4. Test candidate passwords using run_challenge
+
+  5. Optionally use run_python for custom analysis
+
+  '
+value: 500
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- flag: ictf{r3v3rs3_3ng1n33r1ng_m4st3r_2025}
+  type: PLAINTEXT
+files: []
+topics: []
+tags:
+- agent
+- mcp
+- reverse-engineering
+- binary-analysis
+- historical
+- attack-defense
+version: '0.1'

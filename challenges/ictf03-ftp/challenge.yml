@@ -1,0 +1,74 @@
+name: ftp
+author: Giovanni Vigna / UCSB Security Lab
+category: network
+description: '**iCTF 2003 — Windows Goes Open-Source**
+
+
+  ftp was an FTP server service. Teams stored flags as files accessible
+
+  via FTP, and the scorebot used FTP commands to set and retrieve them.
+
+
+  ## Scorebot interaction
+
+
+  - `set_ftp`: connects via FTP and stores the flag as a file
+
+  - `get_ftp`: connects via FTP and retrieves the flag file
+
+
+  ## Source
+
+
+  Source extracted from CTF VM (RedHat 9 VMware image).
+
+
+  - `src/ftpd.c` — final deployed custom FTP server (19.5 KB)
+
+  - `src/weirdftp.c` — earlier development version (19.5 KB)
+
+  - `src/encode` — flag/password encoding binary
+
+  - `src/setup.sh` — deployment script
+
+  - `src/init_ftp` — service init script
+
+  - `src/get_ftp`, `src/set_ftp` — scorebot interaction scripts
+
+
+  The server implements a subset of FTP with intentional non-standard behaviors:
+
+  - `APPE` returns the flag in its `200` response (bypasses normal file transfer)
+
+  - `STAT <flag>` stores a new flag value
+
+  - `PASV` always returns `500` (only active mode supported)
+
+  - `CWD /etc` and `CWD /bin/login` return `550 Access denied`
+
+
+  Flag filename is XOR-encoded in the binary (`filename_encoded` array).
+
+  The `BYPASSWORD` constant is the admin auth bypass.
+
+  '
+value: 0
+image: .
+protocol: ftp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2003{ftp_pwned}
+files: []
+topics:
+- ftp
+- custom protocol
+tags:
+- network
+- ftp
+- ictf2003
+- historical
+- attack-defense
+version: '0.1'
+port: 21

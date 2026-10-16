@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf08-mainwebsite"
+CHALLENGE_PORT=9000

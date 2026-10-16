@@ -1,0 +1,50 @@
+name: Everybody's Got Something to Hide
+author: escape_wq / UCSB Security Lab
+category: web
+description: '**iCTF 2020 — Abbey Road (1 After 909)**
+
+
+  "The infinite monkey theorem says that with enough monkeys writing songs for
+
+  us, we''ll eventually write the world''s best song. Will you be one of our
+
+  monkeys?"
+
+
+  A crowdsourced song-writing service where users contribute song lyrics.
+
+
+  ## Flag location
+
+
+  The flag is in one of the song files. That file''s contents start with
+
+  the flag_id.
+
+
+  ## Source
+
+
+  Full source available at `../../src/everybodys_got_something_to_hide/`
+
+  (cloned from `https://github.com/shellphish/ictf-2020-challs-public`).
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2020{everybodys_got_something_to_hide_pwned}
+files: []
+topics: []
+tags:
+- web
+- beatles
+- ictf2020
+- historical
+- attack-defense
+version: '0.1'
+port: 80

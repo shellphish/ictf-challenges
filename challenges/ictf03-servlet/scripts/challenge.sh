@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf03-servlet"
+CHALLENGE_PORT=80

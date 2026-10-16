@@ -1,0 +1,50 @@
+name: 'Copyright Mafia: Therapy'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: "**iCTF 2007 — The Copyright Mafia**\n\nEven Mafia members need mental\
+  \ health services. The therapy service\nprovides counseling for Mafia operatives\
+  \ — clients submit complaints\nagainst counselors; counselors manage case notes.\n\
+  \n## Architecture\n\n- **Frontend:** PHP redirect (`therapy.php`) on port 80, immediately\n\
+  \  redirects to Tomcat on port 8080 (`/Therapy/`)\n- **Backend:** Apache Tomcat\
+  \ 6.0.14 running `Therapy.war` (Java servlet)\n- **Database:** MySQL `psycho` /\
+  \ user `psycho` / password `psycho`\n- Two roles: `client` and `counselor` (stored\
+  \ in `role` ENUM column)\n\n## Flag mechanism\n\nThe flag is stored in the `private_info`\
+  \ column of the `users` table:\n```sql\nprivate_info varchar(128)   -- FLAG STORAGE\n\
+  ```\nThe scorebot creates a counselor with the flag in `private_info`;\nonly counselors\
+  \ can read each other's private info.\n\n## Java source (Therapy.war — Tomcat 6.0.14)\n\
+  \nFull Java source files are in `src/java/WEB-INF/classes/`:\n- `psycho/` — `ActionController.java`,\
+  \ `ApplicationResources.java`, `RequestHelper.java`\n- `psycho/users/` — `AccountManager.java`,\
+  \ `ClientManager.java`, `CreateUser.java`, `User.java`\n- `psycho/utils/` — `Command.java`,\
+  \ `DatabaseHelper.java`\n- `org/apache/jsp/` — compiled JSP source: login, menu,\
+  \ index, clients, counselor,\n  complain, newcomplain, newuser, error pages\n\n\
+  Note: `therapy-src.jar.gpg` on the VM was GPG-encrypted (key unknown);\nhowever,\
+  \ the `Therapy.war` file itself contains both `.class` and `.java` source files.\n\
+  \n## Vulnerability hints\n\n- `DatabaseHelper.java` uses `PreparedStatement` for\
+  \ most queries, but\n  certain path parameters may be concatenated into SQL strings\n\
+  - Client-counselor assignment allows lateral access to another user's `private_info`\n\
+  - Session management in `RequestHelper.java` — cookie forgery possible?\n- Role\
+  \ escalation: client → counselor via account update path\n"
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2007{therapy_pwned}
+files: []
+topics:
+- web
+- java
+- sql injection
+- tomcat
+tags:
+- web
+- java
+- tomcat
+- mysql
+- ictf2007
+- historical
+- attack-defense
+version: '0.1'
+port: 8080

@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf06-bts-travel"
+CHALLENGE_PORT=9000

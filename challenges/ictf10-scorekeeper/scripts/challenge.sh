@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf10-scorekeeper"
+CHALLENGE_PORT=9000

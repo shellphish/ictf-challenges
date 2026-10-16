@@ -1,0 +1,55 @@
+name: UN Voting System (pollit)
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2004 — The 2004 United Nations Vote**
+
+
+  The "pollit" service is the UN Security Council polling platform —
+
+  a Perl CGI application (`poll.pl`) with shared utility functions
+
+  (`global_func.pl`, `local_func.pl`). Teams stored flags as poll results;
+
+  the flag is the poll content. Find a vulnerability to read or inject polls.
+
+
+  ## Source
+
+
+  - `src/pollit/cgi-bin/poll.pl` — main poll CGI
+
+  - `src/pollit/cgi-bin/global_func.pl` — shared Perl utilities
+
+  - `src/pollit/cgi-bin/local_func.pl` — local Perl utilities
+
+  - `src/pollit/html/pollit.html` — HTML frontend
+
+  - `src/poll.pl` — alternative version from the UN main webapp
+
+  - `src/pollit_bot.py` — scorebot interaction script
+
+  - `src/pollitScoringScript.py` — scoring script
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{pollit_compromised}
+files: []
+topics:
+- web exploitation
+- perl CGI
+- SQL injection
+tags:
+- web
+- perl
+- cgi
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 80

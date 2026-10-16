@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf04r-bassretard"
+CHALLENGE_PORT=9000

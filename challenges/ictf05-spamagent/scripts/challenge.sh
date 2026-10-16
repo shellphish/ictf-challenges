@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf05-spamagent"
+CHALLENGE_PORT=9000

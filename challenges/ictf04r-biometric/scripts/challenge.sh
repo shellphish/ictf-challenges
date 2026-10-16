@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf04r-biometric"
+CHALLENGE_PORT=80

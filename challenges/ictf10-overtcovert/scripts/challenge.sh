@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf10-overtcovert"
+CHALLENGE_PORT=9000

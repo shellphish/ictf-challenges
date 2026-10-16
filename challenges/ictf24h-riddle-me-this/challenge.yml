@@ -1,0 +1,23 @@
+name: riddle_me_this
+author: iCTF 2024 organizers
+category: misc
+description: "A poem from a guy with sunglasses:\n\n I exist in a world within a world,\n\
+  \ Where what is real is often twirled.\n\nMy mind is linked to the next guy and\
+  \ hers,\nyet the life you live is normal but cursed.\n\nYou can feel and experience\
+  \ what I am like\nbut yet you will never grasp my full might.\n\nWhat am I?\n"
+value: 50
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{the_matrix}
+files: []
+topics:
+- misc
+tags:
+- misc
+- historical
+- attack-defense
+version: '0.1'

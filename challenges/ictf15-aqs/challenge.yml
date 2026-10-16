@@ -1,0 +1,35 @@
+name: aqs
+author: UCSB Seclab
+category: web
+description: '**iCTF 2015 — Crowdsourcing Evil**
+
+
+  This is a website that has a guestbook for The Association for Quality SPAM!
+
+
+  **Flag ID:** The flag_id is the first part of the username, separated from the second
+  part by an underscore.
+
+
+  Port: 8014. Source not available (only competition database and base VM preserved).
+
+  This service was reused from an earlier iCTF edition or submitted by teams for ictf15.
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2015{aqs_pwned}
+files: []
+topics: []
+tags:
+- web
+- ictf2015
+- historical
+- attack-defense
+version: '0.1'
+port: 8014

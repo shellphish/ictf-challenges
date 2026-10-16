@@ -1,0 +1,35 @@
+name: 'Reverse 100: Whitespace Steganography'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: 'Create a version of the Softerror.com `mission.txt` file that has
+
+  steganographically encoded the sentence:
+
+
+  **"All Your Base Are Belong To Us"**
+
+
+  When the modified `mission.txt` is fed to `prog.c` (the program whose
+
+  source is provided), it should print that sentence.
+
+  '
+value: 100
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- All Your Base Are Belong To Us
+files: []
+topics:
+- whitespace steganography
+- reverse engineering
+tags:
+- binary
+- steganography
+- ictf2008
+- historical
+- attack-defense
+version: '0.1'

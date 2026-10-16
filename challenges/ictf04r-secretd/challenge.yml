@@ -1,0 +1,63 @@
+name: 05 — Secret Storage Daemon (secretd)
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2004-05 — The Bass Tard Corporation**
+
+
+  `secretd` is a C++ SSL/TLS daemon (port 8008) backed by BerkeleyDB.
+
+  It stores and retrieves named secrets, protected by an RSA key pair
+
+  (`secretd.public` / `secretd.private` — included in the repository).
+
+
+  The service uses a custom `CHECKSUM_KEY` (0xb976be5) anti-tamper
+
+  scheme: stored entries include a checksum; a wrong key causes reads
+
+  to return garbage (`SCRAMBLE` mode) or nothing. The service forks
+
+  on each connection (or uses threads when `USE_THREADS` is defined).
+
+
+  A `DUMP_PROBABILITY` of 75% means the service randomly drops responses,
+
+  making timing-based attacks unreliable. The `secretd.in` management
+
+  script and `poundsvc` (pound reverse proxy) scripts are included.
+
+
+  Scorebot password: `b1t3m3`
+
+
+  Reverse the protocol, bypass the SSL client-certificate check (if any),
+
+  or find logic flaws in the checksum or scramble paths to read secrets
+
+  without the proper credentials.
+
+  '
+value: 0
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf0405{secretd_compromised}
+files: []
+topics:
+- binary exploitation
+- SSL/TLS
+- C++
+- BerkeleyDB
+tags:
+- binary
+- pwn
+- ssl
+- crypto
+- ictf0405
+- historical
+- attack-defense
+version: '0.1'
+port: 8008

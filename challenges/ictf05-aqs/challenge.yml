@@ -1,0 +1,43 @@
+name: 'Spam World: AQS Guestbook'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2005 — The Spam Museum: AQS (Association for Quality SPAM)**
+
+
+  A multi-component CGI: `cprog` (C binary) applies a rotating-additive cipher
+
+  to QUERY_STRING then `execl`s `parser.pl` (Perl) with the ciphered args.
+
+  Also includes a Python guestbook (`guestbook.py`/`library.py`). The C source
+
+  is available; the inline x86 `speedup` function adds a rotating key (starting
+
+  at 1, incremented by 3 mod 16) to each byte. Bypassing the cipher allows
+
+  injecting arbitrary arguments into `parser.pl`.
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{aqs_pwned}
+files: []
+topics:
+- reverse engineering
+- CGI
+- cipher bypass
+- x86 assembly
+tags:
+- web
+- c
+- perl
+- python
+- cgi
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

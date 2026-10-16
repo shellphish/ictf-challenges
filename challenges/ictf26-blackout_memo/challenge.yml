@@ -1,0 +1,22 @@
+name: blackout_memo
+author: SalehMomeni
+category: forensics
+description: 'A confidential internal memo was sanitized just hours before release.
+
+  Recover the redacted image from the provided PDF and submit the flag.
+
+  '
+value: 500
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{nice_black_box_try_again}
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

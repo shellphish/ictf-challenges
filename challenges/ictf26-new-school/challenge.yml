@@ -1,0 +1,19 @@
+name: New School
+author: squishyy
+category: crypto
+description: It's your first day at a new school. You need to register at the main
+  office. I've heard they have a really advanced method of assigning IDs...
+value: 500
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{y0u_h4v3_t0o_m4ny_1d3nt1t13s}
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

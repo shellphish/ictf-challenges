@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf07-copyright"
+CHALLENGE_PORT=9000

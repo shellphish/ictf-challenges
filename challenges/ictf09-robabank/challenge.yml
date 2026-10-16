@@ -1,0 +1,41 @@
+name: RobaBank
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2009 — Know Your Enemy: Rise of the Botnet**
+
+
+  RobaBank (`robabank.com` inside the game network) was the in-game banking
+
+  service. Automated browser bots held accounts there. Teams that successfully
+
+  exploited a visiting browser could steal its RobaBank credentials and
+
+  transfer the victim''s funds to their own team account. Direct attacks on
+
+  the bank itself were prohibited; the intended path was browser exploitation
+
+  followed by credential theft.
+
+
+  Source not preserved in this archive.
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2009{bank_robbed}
+files: []
+topics:
+- credential theft
+- web application
+tags:
+- web
+- banking
+- ictf2009
+- historical
+- attack-defense
+version: '0.1'

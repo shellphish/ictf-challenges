@@ -1,0 +1,31 @@
+name: 'Copyright Mafia: The Petition'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2007 — The Copyright Mafia**
+
+
+  Citizens oppressed by the Copyright Mafia can sign petitions to contest
+
+  unfair enforcement. The petition service is a Python CGI that manages
+
+  signatures and allows signers to communicate. Find a vulnerability.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2007{petition_pwned}
+files: []
+topics: []
+tags:
+- web
+- python
+- cgi
+- ictf2007
+- historical
+- attack-defense
+version: '0.1'

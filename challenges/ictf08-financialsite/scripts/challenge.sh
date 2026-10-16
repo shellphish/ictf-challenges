@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf08-financialsite"
+CHALLENGE_PORT=9000

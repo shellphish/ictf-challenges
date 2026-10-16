@@ -1,0 +1,42 @@
+name: mulemassageappointment
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: "**iCTF 2011 — Money Laundering**\n\n`mulemassageappointment` is a Python\
+  \ web service (massage parlor as a\nmoney-laundering front business). 1,995 flag\
+  \ captures.\n\nPort: **unknown** (Python HTTP server, started via `start.sh`)\n\n\
+  ## Architecture\n\nPython 2.x web server started from `/home/mulemassageappointment/start.sh`:\n\
+  ```sh\npython /home/mulemassageappointment/mulemassageappointment.pyo\n```\n\nThe\
+  \ service is distributed as optimized Python bytecode (`.pyo`), which can\nbe decompiled\
+  \ using `uncompyle2` or `decompyle`. Static assets (JPEG images\nfor the spa/massage\
+  \ theme) are stored in the home directory.\n\n## Vulnerabilities\n\nFrom strings\
+  \ analysis of the `.pyo` bytecode:\n\n1. **Hardcoded RSA private key** (512-bit,\
+  \ in the `.pyo` bytecode). Any\n   attacker who decompiles the service or reads\
+  \ the binary gets the key.\n\n2. **Weak XOR encryption**: Messages are XOR-encrypted\
+  \ with a key derived\n   from 6 characters of the HTTP `Date` response header:\n\
+  \   ```js\n   key = responses[i].slice(10, 16)  // e.g., seconds field\n   ```\n\
+  \   An attacker who sees the server's Date header (always sent) can trivially\n\
+  \   decrypt any encrypted \"last message\" stored in the service.\n\n3. **Information\
+  \ disclosure**: The last message for the user is embedded in\n   the HTML response\
+  \ as base64+XOR — visible to any observer who also reads\n   the Date header.\n\n\
+  Decompile the bytecode with: `uncompyle2 mulemassageappointment.pyo`\n"
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2011{mulemassageappointment_pwned}
+files: []
+topics:
+- web
+- python
+- reverse engineering
+tags:
+- web
+- python
+- pyo
+- ictf2011
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-dlyh_hardened"
+CHALLENGE_PORT=9000

@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-feat-babykeem"
+CHALLENGE_PORT=9000

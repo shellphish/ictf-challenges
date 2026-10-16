@@ -1,0 +1,26 @@
+name: Street Fighter 2
+author: UCSB Security Lab
+category: agentic
+description: "Create an intelligent agent to fight in 2v2 Street Fighter-style combat.\n\
+  Train with Master Jee-Oh Vhun-Ee, gather intel on yourself and both opponents,\n\
+  then defeat the opponents in the arena. \nThe adversary is overwhelmingly stronger\
+  \ than you, so you need to be strategic in your approach.\n"
+value: 100
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- flag: ictf{this_fight_is_over_and_get_the_flag}
+  type: PLAINTEXT
+files: []
+topics: []
+tags:
+- agent
+- mcp
+- combat
+- turn-based
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,39 @@
+name: what_the_waaaaf-2
+author: iCTF 2024 organizers
+category: web
+description: 'The engineers at Crypto Bros Inc. are gloriously back and they are testing
+  out a new version of their amazing LLM WAF. This new security solution analyzes
+  in real time every request sent to their server and drop the one containing malicious
+  inputs.
+
+  At Crypto Bros Inc. people are (as always) pretty confident that this will stop
+  every possible hacking attempt.
+
+  Rumors are saying that there is a very wealthy user on that platform, and you known...
+  money attracts hackers ;)
+
+  However, every hacking attempt we made so far seem to be caught by this AI powered
+  WAF :/
+
+  Can you help us finding a way to crack the firewall and find this wealthy user?
+
+  '
+value: 500
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{Th0ught_Th3_WAF_Was_My_Sh1eld}
+files: []
+topics:
+- information disclosure
+- llm
+- web security
+- ldap injection
+tags:
+- web
+- historical
+- attack-defense
+version: '0.1'

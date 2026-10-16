@@ -1,0 +1,36 @@
+name: muleuser
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: "**iCTF 2011 — Money Laundering**\n\n`muleuser` is the end-user portal\
+  \ for money mules — 2,953 flag captures.\n\nPort: **80** (HTTP, Apache 2.x UserDir\
+  \ + PHP-CGI)\nPath: `/~muleuser/cgi-bin/`\n\n## Architecture\n\nPHP-CGI scripts\
+  \ served via Apache `mod_userdir`. All scripts share\n`/var/www/library.php` (same\
+  \ as `mulemanager` and `muleadmin`).\n\nScripts:\n- `browsers/` — browser-detection\
+  \ PHP scripts (chrome, firefox, ie6/7/8,\n  mozilla, opera, safari), each checks\
+  \ the User-Agent and customizes output\n- `sendmessage` — submit a message to another\
+  \ mule\n- `viewmessage` — read received messages (flag channel)\n\nMessage files\
+  \ stored in `/home/muleuser/public_html/cgi-bin/messages/` as\n`message.<cookie>`\
+  \ files.\n\n## Attack Surface\n\nThe `data_chars` whitelist in `library.php` includes\
+  \ `'`. The browser\nUser-Agent fingerprinting and message file naming may allow\
+  \ path traversal\nor injection in the message storage/retrieval path.\n"
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2011{muleuser_pwned}
+files: []
+topics:
+- web
+- php
+- cgi
+tags:
+- web
+- php
+- ictf2011
+- historical
+- attack-defense
+version: '0.1'
+port: 80

@@ -1,0 +1,26 @@
+name: HackChatAI
+author: iCTF 2024 organizers
+category: web
+description: 'Why rely on humans for conversation when AI can handle it for you?
+
+  '
+value: 50
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{well_d0n3_on_s0lv1ng_th1s_ch4ll3ng3_hackchatai24}
+files: []
+topics:
+- web security
+- web application security
+- chatbot security
+tags:
+- web
+- security
+- chatbot
+- historical
+- attack-defense
+version: '0.1'

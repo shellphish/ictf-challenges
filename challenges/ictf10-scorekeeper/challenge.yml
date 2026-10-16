@@ -1,0 +1,50 @@
+name: Scorekeeper
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2010 — Hit ''em Where it Hurts**
+
+
+  The Scorekeeper is the central PHP web API that coordinates all game
+
+  economy transactions. Other services authenticate to it using hardcoded
+
+  component credentials and report score events:
+
+
+  - `challenge` (pw: `makeyourchallengecount`) — solved challenges → points
+
+  - `mothership` (pw: `botnetseverywhere`) — bot steals → money transfer
+
+  - `firewall` (pw: `iseeeverything`) — bribe payments → firewall unblock
+
+  - `scorebot` (pw: `getthatflagdude`) — captured flags → points + money
+
+  - `scoreboard` (pw: `gimmethescores`) — score reads
+
+
+  The MySQL root password is `yougottabekiddingright`.
+
+  Full source code and a database backup from competition day are included.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2010{scorekeeper_compromised}
+files: []
+topics:
+- web exploitation
+- PHP exploitation
+- authentication bypass
+tags:
+- web
+- php
+- infrastructure
+- ictf2010
+- historical
+- attack-defense
+version: '0.1'

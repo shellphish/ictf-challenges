@@ -1,0 +1,34 @@
+name: traintrain
+author: Giovanni Vigna, UCSB Seclab
+category: web
+description: '**iCTF 2015 — Crowdsourcing Evil**
+
+
+  This is a Train Transportation Training service!
+
+
+  **Flag ID:** The flag_id is the username.
+
+
+  Port: 8888. Source not available (only competition database and base VM preserved).
+
+  This service was reused from an earlier iCTF edition or submitted by teams for ictf15.
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2015{traintrain_pwned}
+files: []
+topics: []
+tags:
+- web
+- ictf2015
+- historical
+- attack-defense
+version: '0.1'
+port: 8888

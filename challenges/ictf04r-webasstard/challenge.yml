@@ -1,0 +1,33 @@
+name: Web Interface (webasstard)
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2005 — The Bass Tard Corporation**
+
+
+  The web front-end for the Bass Tard Corporation''s remote administration
+
+  platform. Integrates biometric authentication with the BRT service.
+
+  The web application includes a biometric identity check before granting
+
+  access to administrative functions.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{webasstard_compromised}
+files: []
+topics:
+- web exploitation
+- authentication bypass
+tags:
+- web
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

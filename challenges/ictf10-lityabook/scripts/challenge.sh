@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf10-lityabook"
+CHALLENGE_PORT=9000

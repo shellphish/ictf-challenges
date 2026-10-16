@@ -1,0 +1,24 @@
+name: Nexus
+author: you
+category: Web
+description: 'A new social network just launched. They claim their platform is hardened.
+
+
+  `http://nexus.chall.yourdomain.tld`
+
+  '
+value: 500
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- type: static
+  content: ictf{1_th0ught_1t_w4s_h4rd3n3d_but_1t_w4s_3asy}
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

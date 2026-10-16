@@ -1,0 +1,44 @@
+name: sendalert
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: "**iCTF 2011 — Money Laundering**\n\n`sendalert` is a Python 2.6 HTTP\
+  \ server (ThreadingHTTPServer) that provides\nan alert/notification web interface\
+  \ for suspicious transactions. Mules use it\nto send batch alerts to other participants.\n\
+  \nPort: **11111** (HTTP)\nConnects to: `msgdispatcher` at port 31337\n\n## Architecture\n\
+  \nEndpoints: `/login`, `/logout`, `/register`, `/status`, `/send`, `/batch`\n\n\
+  Session cookies use MD5 of `secret + username` where secret is hardcoded\nas `\"\
+  milkthemule\"` — trivially forgeable if the username is known.\n\nSQLite3 database\
+  \ stores user accounts and message queues.\nConfig file (`sendalert.ini`) seeds\
+  \ initial users and alert data.\n\n## Vulnerabilities\n\n1. **Forged session cookie**:\
+  \ Session cookie is `MD5(secret + username)` where\n   `secret = \"milkthemule\"\
+  ` (hardcoded in `sendalert.py`). Any attacker who\n   knows a valid username can\
+  \ forge a valid session cookie.\n\n2. **SQL injection via forged session** (second-order):\
+  \ After forging a\n   cookie, it's used in a non-parameterized query:\n   ```python\n\
+  \   cur.execute(\"\"\"select username, data from users where session='%s'\"\"\"\
+  \ % session)\n   ```\n   Since the attacker controls `session`, this is a direct\
+  \ SQL injection.\n\n## Source\n\nFully recovered from competition VM (`/usr/local/bin/`):\n\
+  - `src/sendalert.py` — complete Python HTTP server (25 KB, full source)\n- `src/sendalert_main`\
+  \ — startup wrapper shell script\n- `src/sendalert.ini` — initial user/data seeding\
+  \ config\n- `src/init_sendalert` — init.d script\n"
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2011{sendalert_pwned}
+files: []
+topics:
+- web
+- python
+- session forgery
+- MD5
+tags:
+- web
+- python
+- ictf2011
+- historical
+- attack-defense
+version: '0.1'
+port: 11111

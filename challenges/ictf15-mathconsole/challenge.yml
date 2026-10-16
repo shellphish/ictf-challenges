@@ -1,0 +1,34 @@
+name: mathconsole
+author: antoniob, UCSB Seclab
+category: binary
+description: '**iCTF 2015 — Crowdsourcing Evil**
+
+
+  A powerful calculator with an on-the-cloud file storage service.
+
+
+  **Flag ID:** The flag_id is the name of a file in the folder service_files.
+
+
+  Port: 9899. Source not available (only competition database and base VM preserved).
+
+  This service was reused from an earlier iCTF edition or submitted by teams for ictf15.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2015{mathconsole_pwned}
+files: []
+topics: []
+tags:
+- binary
+- ictf2015
+- historical
+- attack-defense
+version: '0.1'
+port: 9899

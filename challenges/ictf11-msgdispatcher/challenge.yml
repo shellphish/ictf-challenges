@@ -1,0 +1,71 @@
+name: msgdispatcher
+author: Giovanni Vigna / UCSB Security Lab
+category: network
+description: '**iCTF 2011 — Money Laundering**
+
+
+  `msgdispatcher` is a Python 2.6 TCP service that routes XML messages between
+
+  Money Laundering infrastructure components (`muleserver`, `mulemanager`).
+
+  It stores pending messages as files under `/home/msgdispatcher/messages/` and
+
+  processes command plugins from `/home/msgdispatcher/commands/`.
+
+
+  Port: **31337** (TCP, XML protocol)
+
+
+  ## Architecture
+
+
+  XML-based client-server protocol. `ClientManager` class handles each
+
+  connection in a thread. Uses a `libs.py` helper module for cleanup and
+
+  parsing. Commands are loaded as plugins from the commands/ directory.
+
+
+  The `muleserver` and `mulemanager` roles appear in the XML protocol as
+
+  message recipients/senders.
+
+
+  ## Source
+
+
+  Compiled Python (`.pyc`) recovered from competition VM (`/usr/local/bin/`):
+
+  - `src/msgdispatcher.pyc` — main dispatcher (decompilable with uncompyle2)
+
+  - `src/libs.pyc` — shared library
+
+  - `src/msgdispatcher_main` — startup wrapper shell script
+
+
+  Decompile with: `uncompyle2 msgdispatcher.pyc`
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2011{msgdispatcher_pwned}
+files: []
+topics:
+- network
+- python
+- xml injection
+- message dispatch
+tags:
+- network
+- python
+- xml
+- ictf2011
+- historical
+- attack-defense
+version: '0.1'
+port: 31337

@@ -1,0 +1,66 @@
+name: Erlang Browser
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2009 — Know Your Enemy: Rise of the Botnet**
+
+
+  The competition''s main attack surface: an Erlang-based web browser that
+
+  automatically crawled news sites and visited pages returned by the in-game
+
+  search engine. Teams had to craft malicious web pages that exploited
+
+  vulnerabilities in the browser when it visited their site. A known attack
+
+  surface was Erlang''s `erl_eval` (arbitrary code evaluation). Successful
+
+  exploitation gave control of the browser process, allowing theft of the
+
+  browser''s RobaBank credentials.
+
+
+  Teams attracted browser visits via SEO: publishing blog entries on topics
+
+  the browser found interesting so the in-game search engine ranked their
+
+  site highly.
+
+
+  Source distributed during the competition as `browsers.tar.gz`; not
+
+  preserved in this archive. A Windows XP development VM is available in
+
+  `Virtual Machine/` — it was the organizer''s research workstation (user: Adam),
+
+  not a competition challenge VM. Extracted from it:
+
+  - `src/vm-artifacts/rootkit/MyRootkit.c` — Windows kernel driver template (SecLab
+  TU Wien)
+
+  - `src/vm-artifacts/rootkit/HideProcessHookMDL.c` — SSDT process-hiding rootkit
+  (MDLM technique)
+
+  - `src/vm-artifacts/WinDNSSpoof/` — DNS ID spoofing tool (C++/WinPcap)
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2009{browser_pwned}
+files: []
+topics:
+- browser exploitation
+- Erlang eval injection
+- drive-by download
+tags:
+- web
+- erlang
+- browser-exploit
+- ictf2009
+- historical
+- attack-defense
+version: '0.1'

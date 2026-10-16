@@ -1,0 +1,37 @@
+name: securenotebook
+author: Ali, UCSB Seclab
+category: network
+description: '**iCTF 2015 — Crowdsourcing Evil**
+
+
+  The rogue nation has a complicated network of technology spies to acquire required
+  knowledge about the process of Uranium enrichment. This network uses anonymous networks
+  for transferring the information. This service provides secure anonymous filesharing
+  between users.
+
+
+  **Flag ID:** The flag_id is the username.
+
+
+  Port: 2190. Source not available (only competition database and base VM preserved).
+
+  This service was reused from an earlier iCTF edition or submitted by teams for ictf15.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2015{securenotebook_pwned}
+files: []
+topics: []
+tags:
+- network
+- ictf2015
+- historical
+- attack-defense
+version: '0.1'
+port: 2190

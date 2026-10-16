@@ -1,0 +1,41 @@
+name: 'Copyright Mafia: Would You...?'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: "**iCTF 2007 — The Copyright Mafia**\n\nA Mafia social compliance service:\
+  \ \"Would you pay the fine? Would you\nsign the settlement?\" A compiled Windows\
+  \ PE executable run on Linux via\nWine. A Python 2.5 CGI wrapper (`wouldyou.pyc`)\
+  \ communicates with the\nWindows service via a localhost TCP socket.\n\n## Architecture\n\
+  \n- `wouldyou.exe` — Windows PE binary (Wine daemon, binds local TCP port)\n- `wouldyou.pyc`\
+  \ — Python 2.5 CGI wrapper: forwards client requests to\n  the Wine process over\
+  \ a localhost socket\n- Wine init script (`/etc/init.d/wouldyou`) starts the exe\
+  \ as user `wouldyou`\n\n## Source availability\n\n- `wouldyou.exe` — Windows PE\
+  \ binary, available for static/dynamic analysis\n- `wouldyou.pyc` — Python 2.5 bytecode\
+  \ (CGI wrapper); source `wouldyou.cpp.gpg`\n  was GPG-encrypted on the VM (key unknown)\n\
+  \n## Vulnerability hints\n\n- The Windows binary handles flag storage; look for\
+  \ buffer overflows in\n  the custom TCP protocol, format string bugs, or integer\
+  \ issues\n- The Python CGI layer may add its own attack surface (parameter injection,\n\
+  \  forged session tokens passed to the exe)\n- Wine boundary: can you escape the\
+  \ Wine sandbox or exploit Win32 API quirks?\n"
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2007{wouldyou_pwned}
+files: []
+topics:
+- reverse engineering
+- binary exploitation
+- windows
+- wine
+tags:
+- binary
+- re
+- wine
+- windows
+- ictf2007
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,38 @@
+name: 'Reverse 500: Flash Crypto'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: 'A field agent discovered an abandoned Softerror.com laptop. Forensic
+
+  software found a web cookie containing:
+
+
+  `bombSerial=d54d43c4fa6ba5fc`
+
+
+  along with a `.swf` file in the browser cache: `SecureCookie.swf`.
+
+
+  Can you discover the true contents of the cookie?
+
+  '
+value: 500
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- DOD09718
+files: []
+topics:
+- Flash reverse engineering
+- custom encryption
+- XOR cipher
+tags:
+- binary
+- re
+- flash
+- ictf2008
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-kittens-paradise"
+CHALLENGE_PORT=9000

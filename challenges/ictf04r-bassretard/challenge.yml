@@ -1,0 +1,37 @@
+name: Bass Re-Tard Remote Admin (bassretard)
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2005 — The Bass Tard Corporation**
+
+
+  The Bass Re-Tard (BRT) is a "highly-secure" application developed by the
+
+  Bass Tard Corporation for remote system administration. According to the
+
+  README, "The BRT code has been analyzed by a number of security experts
+
+  and it is considered to be free from any vulnerability."
+
+
+  Find the vulnerability(ies) and compromise the service.
+
+  '
+value: 0
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{bassretard_compromised}
+files: []
+topics:
+- binary exploitation
+- network daemon
+- C
+tags:
+- binary
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

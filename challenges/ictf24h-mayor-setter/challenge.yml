@@ -1,0 +1,23 @@
+name: mayor_setter
+author: iCTF 2024 organizers
+category: pwn
+description: 'Convince this puppy to reveal the secret. The vet said one of his favorite
+  food is a ''format string''? What could that mean?!?
+
+  '
+value: 50
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{w3lc0m3_t0_1ctf}
+files: []
+topics:
+- remote applications
+tags:
+- remote applications
+- historical
+- attack-defense
+version: '0.1'

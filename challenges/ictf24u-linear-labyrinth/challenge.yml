@@ -1,0 +1,23 @@
+name: linear_labyrinth
+author: iCTF 2024 organizers
+category: misc
+description: '**author**: 0xk4l1
+
+  '
+value: 460
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{linear_aggression}
+files: []
+topics: []
+tags:
+- misc
+- ai
+- medium
+- historical
+- attack-defense
+version: '0.1'

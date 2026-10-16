@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-hellforge-records"
+CHALLENGE_PORT=9000

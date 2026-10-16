@@ -1,0 +1,23 @@
+name: hidden_number
+author: iCTF 2024 organizers
+category: programming
+description: 'I think the program is trying to tell me a "number". What is it?
+
+  '
+value: 50
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{infinity}
+files: []
+topics:
+- forensics programming
+tags:
+- forensics
+- visualization
+- historical
+- attack-defense
+version: '0.1'

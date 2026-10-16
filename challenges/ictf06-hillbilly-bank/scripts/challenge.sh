@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf06-hillbilly-bank"
+CHALLENGE_PORT=9000

@@ -1,0 +1,20 @@
+name: ictf_welcome
+author: iCTF 2024 organizers
+category: intro
+description: "Welcome to the 2024 iCTF. \nThis is a warm-up challenge\n"
+value: 100
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{ThisIsJustTheStart}
+files: []
+topics:
+- remote applications
+tags:
+- remote applications
+- historical
+- attack-defense
+version: '0.1'

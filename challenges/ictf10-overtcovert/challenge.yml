@@ -1,0 +1,38 @@
+name: OvertCovert
+author: Giovanni Vigna / UCSB Security Lab
+category: misc
+description: '**iCTF 2010 — Hit ''em Where it Hurts**
+
+
+  OvertCovert (S9) was a steganography/covert-channel service on port 1969.
+
+  Organizers publicly released the source code during the competition to
+
+  encourage teams to analyze it. The service hid information in overt
+
+  communications, requiring teams to find and extract the covert channel.
+
+
+  Source released during competition; also in `vms/ictf2010.services.tar.gz`.
+
+  '
+value: 0
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2010{overtcovert_pwned}
+files: []
+topics:
+- steganography
+- covert channel
+tags:
+- misc
+- steganography
+- network
+- ictf2010
+- historical
+- attack-defense
+version: '0.1'

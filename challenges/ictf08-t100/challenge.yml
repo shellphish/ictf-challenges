@@ -1,0 +1,36 @@
+name: 'Trivial 100: Malware Snippet'
+author: Giovanni Vigna / UCSB Security Lab
+category: misc
+description: 'You are training as a malware analyst for the LA Counter Terrorist Unit.
+
+  The Unit''s Malware Pattern Miner software has determined that the snippet
+
+  in the attachment is extremely common in malicious samples used by the
+
+  Softerror terrorist group.
+
+
+  Assuming the attackers are targeting a Windows XP machine, what is the
+
+  content of the `esi` register at the end of execution?
+
+  '
+value: 100
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- kernel32.dll
+files: []
+topics:
+- shellcode analysis
+- x86 assembly
+tags:
+- misc
+- shellcode
+- ictf2008
+- historical
+- attack-defense
+version: '0.1'

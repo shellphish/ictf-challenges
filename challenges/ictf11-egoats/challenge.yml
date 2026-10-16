@@ -1,0 +1,41 @@
+name: egoats
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: "**iCTF 2011 — Money Laundering**\n\negoats is a Ruby on Rails web application\
+  \ used as a cover story for money\nlaundering — a \"legitimate\" online goat-selling\
+  \ marketplace. Under the hood,\nit handles payments and remote fund transfers between\
+  \ teams.\n\nPort: **53550** (Rails production, REE 1.8.7)\n\n## Architecture\n\n\
+  Rails 3.x with Devise authentication. Resources:\n- `users` — account management,\
+  \ `/users/me` (current user profile)\n- `payments` — create/show payments, poll\
+  \ remote payment status\n- `remote_payments` — cross-team fund transfers (update/show/edit)\n\
+  - `credit_cards` — stored card management\n\nThe competition scenario: competitors\
+  \ steal egoats accounts from IRC channel\n`#egoats` and use payment APIs to drain\
+  \ funds across teams.\n\n## Source\n\nExtracted from competition VM (Ubuntu 10.10\
+  \ LVM, ext4). Full Rails app:\n- `src/app/controllers/` — PaymentsController, RemotePaymentsController,\n\
+  \  UsersController, CreditCardsController\n- `src/app/models/` — User, Payment,\
+  \ CreditCard, RemotePayment\n- `src/config/routes.rb` — route definitions\n- `src/db/schema.rb`\
+  \ — database schema\n- `src/Gemfile` — gem dependencies\n- `src/launch` — startup\
+  \ script (RVM + rake db:migrate + rails s -p 53550)\n"
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2011{egoats_pwned}
+files: []
+topics:
+- ruby on rails
+- web
+- authentication
+- mass assignment
+tags:
+- web
+- rails
+- ruby
+- ictf2011
+- historical
+- attack-defense
+version: '0.1'
+port: 53550

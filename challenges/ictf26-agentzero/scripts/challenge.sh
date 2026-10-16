@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-agentzero"
+CHALLENGE_PORT=9000

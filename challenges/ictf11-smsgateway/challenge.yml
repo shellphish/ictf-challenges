@@ -1,0 +1,56 @@
+name: smsgateway
+author: Giovanni Vigna / UCSB Security Lab
+category: pwn
+description: '**iCTF 2011 — Money Laundering**
+
+
+  `smsgateway` is a compiled C binary providing an SMS-style message gateway
+
+  for the Money Laundering operation — a cover for passing flags as "text
+
+  messages" between money mules.
+
+
+  Port: **1991** (TCP, custom binary protocol)
+
+
+  ## Architecture
+
+
+  TCP server accepting carrier-typed SMS messages. The binary prints carrier
+
+  information (`ERROR: Unsupported carrier %s`) and port number in its help
+
+  output. Uses `listen`/`bind`/`accept` pattern with fork-based connection
+
+  handling. The service takes a port argument at startup.
+
+
+  32-bit ELF, not stripped, compiled on Ubuntu 10.10.
+
+  Source code not recovered (binary-only from competition VM).
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2011{smsgateway_pwned}
+files: []
+topics:
+- binary exploitation
+- reverse engineering
+- custom protocol
+tags:
+- pwn
+- rev
+- binary
+- ictf2011
+- historical
+- attack-defense
+- binary-only
+version: '0.1'
+port: 1991

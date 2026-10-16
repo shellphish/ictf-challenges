@@ -1,0 +1,50 @@
+name: 'UN Voting: Feedback Service'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2004 — The UN Voting System**
+
+
+  A public feedback service for UN election candidates. The Perl CGI
+
+  `feedback_message.pl` accepts comments on candidates and stores them in
+
+  per-user files. The PHP page `feedback.php` displays stored feedback.
+
+  The flag is stored as the comment text; find a way to read other teams'' flags.
+
+
+  ## Source
+
+
+  - `src/feedback_message.pl` — Perl CGI (stores flag in feedback file)
+
+  - `src/feedback.php` — PHP display page
+
+  - `src/feedback_bot.py` — scorebot interaction script
+
+  - `src/feedbackScoringScript.py` — scoring script
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{feedback_pwned}
+files: []
+topics:
+- web exploitation
+- CGI security
+- Perl CGI
+tags:
+- web
+- php
+- perl
+- cgi
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 80

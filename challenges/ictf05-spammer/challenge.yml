@@ -1,0 +1,36 @@
+name: 'Spam World: Spammer Daemon'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2005 — The Spam Museum: Spammer Daemon**
+
+
+  A Python TCP network service (spammerd.py) implementing a custom binary
+
+  "SPAM" protocol using Scapy-like field descriptors. The service uses Python 2
+
+  SocketServer. Banner: "SPAM Server\nVersion 4.5.3 (Testing)\n". Flags are
+
+  stored and retrieved via the custom binary protocol. Source code available.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{spammer_pwned}
+files: []
+topics:
+- custom binary protocol
+- Python network service
+tags:
+- binary
+- tcp
+- network
+- python
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,34 @@
+name: spammer
+author: UCSB Seclab
+category: network
+description: '**iCTF 2015 — Crowdsourcing Evil**
+
+
+  This is a SPAM Delivery Protocol! More information on http://<your_IP>:8123/
+
+
+  **Flag ID:** The flag_id is the username.
+
+
+  Port: 4570. Source not available (only competition database and base VM preserved).
+
+  This service was reused from an earlier iCTF edition or submitted by teams for ictf15.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2015{spammer_pwned}
+files: []
+topics: []
+tags:
+- network
+- ictf2015
+- historical
+- attack-defense
+version: '0.1'
+port: 4570

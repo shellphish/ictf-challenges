@@ -1,0 +1,48 @@
+name: Yellow Submarine
+author: Mystiz / UCSB Security Lab
+category: web
+description: '**iCTF 2020 — Abbey Road (1 After 909)**
+
+
+  "The earth is no longer safe to live in 2047. We will be building yellow
+
+  submarines (Noah''s ark for the twenty-first century) and have our own
+
+  ecosystem."
+
+
+  A submarine ecosystem management service set in a post-apocalyptic 2047.
+
+
+  ## Flag location
+
+
+  flag_id is the filename that contains the flag.
+
+
+  ## Source
+
+
+  Full source available at `../../src/yellow_submarine/`
+
+  (cloned from `https://github.com/shellphish/ictf-2020-challs-public`).
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2020{yellow_submarine_pwned}
+files: []
+topics: []
+tags:
+- web
+- beatles
+- ictf2020
+- historical
+- attack-defense
+version: '0.1'
+port: 80

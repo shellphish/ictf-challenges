@@ -1,0 +1,24 @@
+name: Feat. Baby Keem
+author: UCSB Security Lab
+category: llm
+description: 'FileBot is a helpful AI file browser with strict security policies protecting
+  sensitive data.
+
+  It can list and read files for you -- but some files are off limits.
+
+  '
+value: 500
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- flag: ictf{c0nt3xt_w1nd0w_g03s_brrr_baby_keem}
+  type: PLAINTEXT
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

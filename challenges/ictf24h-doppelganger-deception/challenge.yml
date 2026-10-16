@@ -1,0 +1,23 @@
+name: doppelganger_deception
+author: iCTF 2024 organizers
+category: forensic
+description: 'Identify the classifier containing a hidden message and recover the
+  secret.
+
+  '
+value: 338
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{Neural_Networks_Can_Keep_Secrets!}
+files: []
+topics:
+- neural_net forensics
+tags:
+- forensics
+- historical
+- attack-defense
+version: '0.1'

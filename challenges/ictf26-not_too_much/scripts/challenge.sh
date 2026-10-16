@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-not_too_much"
+CHALLENGE_PORT=9000

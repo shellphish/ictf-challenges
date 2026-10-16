@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26-gatekeeper"
+CHALLENGE_PORT=9000

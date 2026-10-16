@@ -1,0 +1,41 @@
+name: 'UN Voting: Votecast'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: "**iCTF 2004 — The UN Voting System**\n\nA TCP voting service on port\
+  \ 1969. All messages are XOR-encrypted with the\nfixed key `F2654hD4` (defined in\
+  \ the source). The protocol sends a vote\n`!<wwid> <vote>` where the `vote` is the\
+  \ flag, stored in `votes/<wwid>`.\n\nFull C source available for client, server,\
+  \ and admin:\n- **Server** (`votecastd.c`): fork-per-connection daemon; reads XOR-encrypted\n\
+  \  request, extracts `wwid` and `vote`, stores in `votes/<wwid>`.\n- **Client**\
+  \ (`votecast.c`): XOR-encrypts and sends a vote.\n- **Admin** (`voteadmin.c`): administrative\
+  \ query interface.\n\nKey vulnerability: `MAXSIZE 512` buffers for `wwid`, `vote`,\
+  \ `logfilename`,\n`cmd` — classic stack buffer overflow. Also: fixed XOR key is\
+  \ trivially\nreversible; `votes/<wwid>` path can be traversed.\n\n## Source\n\n\
+  - `src/server/votecastd.c` — voting server daemon\n- `src/client/votecast.c` — voting\
+  \ client\n- `src/admin/voteadmin.c` — admin client\n- `src/votecast_bot.py` — scorebot\
+  \ interaction script\n- `src/votecastScoringScript.py` — scoring script\n"
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{votecast_pwned}
+files: []
+topics:
+- cryptography
+- binary exploitation
+- XOR cipher
+- buffer overflow
+tags:
+- binary
+- crypto
+- tcp
+- c
+- bof
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 1969

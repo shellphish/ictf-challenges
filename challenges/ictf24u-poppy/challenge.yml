@@ -1,0 +1,24 @@
+name: poppy
+author: iCTF 2024 organizers
+category: programming
+description: 'Let''s play a game! Beat my AI and I''ll give you the flag. Good luck!
+
+  '
+value: 50
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{k33p_1t_uP_4nd_1t_w1ll_b3_0k4y}
+files: []
+topics:
+- remote applications
+- game strategies
+- planning
+tags:
+- remote applications
+- historical
+- attack-defense
+version: '0.1'

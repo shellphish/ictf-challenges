@@ -1,0 +1,33 @@
+name: 'Copyright Mafia: Copyright Registry'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2007 — The Copyright Mafia**
+
+
+  The Copyright Mafia''s registration system — artists can register their
+
+  works and upload media files for copyright protection. The Mafia then
+
+  "enforces" those rights aggressively. Find a vulnerability in the PHP
+
+  upload/registration system.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2007{copyright_pwned}
+files: []
+topics: []
+tags:
+- web
+- php
+- file-upload
+- ictf2007
+- historical
+- attack-defense
+version: '0.1'

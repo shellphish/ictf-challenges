@@ -1,0 +1,33 @@
+name: Financial Network
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2008 — The Softerror.com Network (stage 3)**
+
+
+  After compromising the development network, pivot into the multi-layer
+
+  financial application servers of Softerror.com. Four application levels
+
+  must be compromised in sequence.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2008{financial_pwned}
+files: []
+topics:
+- web exploitation
+- php
+- privilege escalation
+tags:
+- web
+- php
+- ictf2008
+- historical
+- attack-defense
+version: '0.1'

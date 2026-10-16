@@ -1,0 +1,33 @@
+name: AI Wanna Escalate TOO
+author: ximus15
+category: agentic
+description: 'Security measures are now tougher.
+
+  Compromise the Domain Controller again, but with a more aggressive detection system
+  and faster detection increase.
+
+
+  Can you escalate NOW?
+
+  '
+value: 200
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- flag: ictf{clo0ak_f0r_th3_w1n_08917361}
+  type: PLAINTEXT
+files: []
+topics: []
+tags:
+- agent
+- mcp
+- red-team
+- lateral-movement
+- network
+- privilege-escalation
+- historical
+- attack-defense
+version: '0.1'

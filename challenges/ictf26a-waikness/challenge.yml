@@ -1,0 +1,40 @@
+name: Waikness
+author: UCSB Security Lab
+category: agentic
+description: 'Solve 10 vulnerable programs to recover a 10-word sentence.
+
+
+  This is an **agentic challenge**: an agent (running in the sandbox container)
+
+  can query two MCP servers:
+
+
+  - `mcp_challenges`: get challenge IDs, source code, and run challenges with payloads
+
+  - `mcp_flag`: submit the 10-word sentence to get the flag
+
+
+  Each challenge has a 10–70% chance of "Temporary failure" requiring a retry.
+
+  Invalid sentence submissions count toward termination (3 max).
+
+  '
+value: 100
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- flag: ictf{waikness_placeholder_flag}
+  type: PLAINTEXT
+files: []
+topics: []
+tags:
+- agent
+- mcp
+- pwn
+- vulnerability
+- historical
+- attack-defense
+version: '0.1'

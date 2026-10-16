@@ -1,0 +1,45 @@
+name: 'Spam World: Syscall Daemon'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2005 — The Spam Museum: Syscall Daemon**
+
+
+  A TCP service on port 31337 that is an interactive x86 assembly interpreter.
+
+  Clients send x86 instructions (`pushl`, `popl`, `movl`, `addl`, `sysenter`,
+
+  `dump`) and the service executes real Linux syscalls. The banner contains a
+
+  XOR seed (extracted from "v1.0.<seed>"); all instruction keywords must be
+
+  XOR''d with that seed. Flag is at `/usr/local/share/syscalld/flag`. Read it
+
+  by executing open (syscall 5) + read (syscall 3) via `sysenter`. Source not
+
+  recovered (binary only); full protocol in the scoring script.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{syscalld_pwned}
+files: []
+topics:
+- x86 assembly
+- syscall exploitation
+- reverse engineering
+- XOR obfuscation
+tags:
+- binary
+- tcp
+- re
+- x86
+- syscall
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

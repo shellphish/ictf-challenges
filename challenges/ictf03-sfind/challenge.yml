@@ -1,0 +1,45 @@
+name: sfind
+author: Giovanni Vigna / UCSB Security Lab
+category: pwn
+description: "**iCTF 2003 — Windows Goes Open-Source**\n\nsfind was a custom file-search\
+  \ service. Clients sent line-delimited\nrequests specifying search parameters; the\
+  \ service ran file searches\nand returned matching results. Flags were stored as\
+  \ keywords in\nsearchable files.\n\n## Protocol\n\nText-based TCP protocol (via\
+  \ `sfindc` helper):\n```\nid <num>\nuser <username>\npassword <password>\nfilename\
+  \ <glob>\nkeyword <searchterm>\nenviron <VAR=value>\n```\n\n## Vulnerability\n\n\
+  Two confirmed vulnerabilities (from source, extracted from CTF VM):\n\n1. **Command\
+  \ injection**: The `keyword` field is passed unquoted to `system()`:\n   ```c\n\
+  \   sprintf(cmd, \"find %s -name \\\"%s\\\" -exec grep -H -n %s \\\\{\\\\} \\\\\
+  ; > %s\",\n           init_cwd, filename, keyword, outf);\n   system(cmd);\n   ```\n\
+  \   Injecting shell metacharacters in `keyword` (e.g., `foo; cat /etc/passwd`)\n\
+  \   executes arbitrary commands.\n\n2. **Environment variable injection**: The `environ`\
+  \ command sets environment\n   variables via `putenv()` before the `find` exec,\
+  \ allowing `LD_PRELOAD`\n   injection or similar attacks.\n\n## Source\n\nSource\
+  \ extracted from CTF VM (RedHat 9 VMware image).\n\n- `src/sfind.c` — final deployed\
+  \ server (has hardcoded flag/password placeholders)\n- `src/weirdfind.c` — earlier\
+  \ development version (same logic)\n- `src/weirdfindc.c` — earlier version of the\
+  \ client\n- `src/encode.c` — flag/password encoding utility\n- `src/setup.sh` —\
+  \ deployment script\n- `src/get_sfind`, `src/set_sfind` — scorebot scripts (use\
+  \ `sfindc` binary)\n- `src/init_sfind` — service init script\n\nThe flag filename\
+  \ is XOR-encoded in `flagname_encoded[]` (decoded: `\" !\"` minus 8, 9, 10).\nThe\
+  \ `BYPASSWORD` constant `\"XXGvWEuD1BDMI\"` is the service auth bypass password.\n"
+value: 0
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2003{sfind_pwned}
+files: []
+topics:
+- command injection
+- environment variable injection
+tags:
+- pwn
+- binary
+- network
+- ictf2003
+- historical
+- attack-defense
+version: '0.1'

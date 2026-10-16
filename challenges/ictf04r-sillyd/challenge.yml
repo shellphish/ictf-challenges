@@ -1,0 +1,41 @@
+name: 05 — Silly Auth Server (sillyd)
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: "**iCTF 2004-05 — The Bass Tard Corporation**\n\n`sillyd` is a C authentication\
+  \ daemon listening on TCP port 12345.\nIt issues random 31-character auth tokens\
+  \ (stored as flat files under\n`data/`) and verifies them with REG/AUTH/REVOKE commands.\n\
+  \nProtocol:\n```\nREG    <secretID>   => +REG <auth token>\nAUTH   <auth token>\
+  \ => +AUTH <secretID>\nREVOKE <auth token> => +REVOKE\nPING   <num>        => +PONG\n\
+  ```\n\nTwo documented vulnerabilities (see `src/sillyd.txt`):\n\n1. **Command injection\
+  \ via AUTH** — If the auth token is valid but\n   long enough that `id` and `cmdbuf`\
+  \ merge into a single string, the\n   call to `grep` via `system()` will see extra\
+  \ shell arguments. Exploit\n   to inject shell commands along with the token match.\n\
+  \n2. **PING buffer overflow** — The PING handler passes a `char*` as an\n   `int*`\
+  \ to store the ping count. This corrupts the `bp` variable (the\n   remaining `read()`\
+  \ size), allowing a crafted PING (without `\\r\\n`\n   terminator) to grow the read\
+  \ buffer and overflow `cmdbuf` (2342 bytes)\n   on the next read.\n\nRun: `cd sillyd_dir\
+  \ && mkdir data && ./sillyd &`\n"
+value: 0
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf0405{sillyd_compromised}
+files: []
+topics:
+- buffer overflow
+- command injection
+- C
+- custom protocol
+tags:
+- binary
+- pwn
+- buffer-overflow
+- command-injection
+- ictf0405
+- historical
+- attack-defense
+version: '0.1'
+port: 12345

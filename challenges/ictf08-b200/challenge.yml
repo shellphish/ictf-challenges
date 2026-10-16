@@ -1,0 +1,39 @@
+name: 'Binary 200: Drive-by PDF'
+author: Giovanni Vigna / UCSB Security Lab
+category: forensics
+description: 'The forensics team of the Counter Terrorist Unit has recovered part
+  of a
+
+  deleted file from a suspected terrorist''s hard disk. We believe the file
+
+  was used in a drive-by download attack through which the Softerror group
+
+  obtained credentials for financial accounts.
+
+
+  Find the site that hosted the malware that was downloaded and installed on
+
+  victims'' machines during the attack.
+
+  '
+value: 200
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2008{b200_url}
+files: []
+topics:
+- PDF forensics
+- shellcode analysis
+- malware analysis
+tags:
+- forensics
+- shellcode
+- pdf
+- ictf2008
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,42 @@
+name: 05 — Biometric File Service (biometric)
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: "**iCTF 2004-05 — The Bass Tard Corporation**\n\n`biometric` is a CGI\
+  \ binary that gates file storage and retrieval\nbehind a \"biometric\" password\
+  \ check (`CORPORATE_PASSWORD \"miconsenta\"`).\nUsers submit their username, the\
+  \ corporate password, and an operation\n(`OP-query`, `OP-store`, or any string)\
+  \ via HTTP GET parameters.\n\nThree vulnerabilities hide in plain sight:\n\n1. **Format\
+  \ string — unknown operation path**: when the operation is\n   neither `query` nor\
+  \ `store`, the code prints it directly:\n   `printf(operation)` after stripping\
+  \ the `OP-` prefix. Supply a\n   format string like `OP-%x.%x.%s` to read the stack.\n\
+  \n2. **Format string — wrong password path**: when the corporate password\n   is\
+  \ wrong, `printf(argv[2])` is called with the raw password argument\n   as the format\
+  \ string.\n\n3. **Path traversal via `touch`**: after a valid operation, `execlp`\n\
+  \   runs `touch argv[1]` with the unsanitized user argument. Provide a\n   path\
+  \ like `../../etc/cron.d/shell` to touch arbitrary files.\n\nThe service password\
+  \ for the scorebot is `putyourfingerhere`.\n\nRecover the flag from the running\
+  \ service.\n"
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf0405{biometric_compromised}
+files: []
+topics:
+- binary exploitation
+- format string
+- CGI
+- C
+tags:
+- binary
+- pwn
+- format-string
+- cgi
+- ictf0405
+- historical
+- attack-defense
+version: '0.1'
+port: 80

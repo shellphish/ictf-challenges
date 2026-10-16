@@ -1,0 +1,39 @@
+name: sillybox
+author: Jacopo Corbetta (jacopo@cs.ucsb.edu), UCSB Seclab
+category: binary
+description: '**iCTF 2015 — Crowdsourcing Evil**
+
+
+  You enrich uranium. You need centrifuges. You need computers. Your computers need
+  fans. Obvious solution is obvious. But now code runs on top of centrifuges, that''s
+  dangerous! So you put up this little silly sandbox that runs arbitrary code BUT
+  allows reading files only if you know their password. But maybe some files are interesting...
+  See the README for more info.
+
+
+  **Flag ID:** The flag_id is the name of the file you have to read (it will contain
+  the flag).
+
+
+  Port: 4669. Source not available (only competition database and base VM preserved).
+
+  This service was reused from an earlier iCTF edition or submitted by teams for ictf15.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2015{sillybox_pwned}
+files: []
+topics: []
+tags:
+- binary
+- ictf2015
+- historical
+- attack-defense
+version: '0.1'
+port: 4669

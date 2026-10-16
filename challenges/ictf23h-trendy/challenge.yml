@@ -1,0 +1,21 @@
+name: Trendy
+author: iCTF 2023 organizers
+category: misc
+description: 'There''s something odd about this data, but I can''t quite put my finger
+  on it. Can you see what''s going on?
+
+  '
+value: 500
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{AlwAysPLotThEDAtAFiRSt}
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

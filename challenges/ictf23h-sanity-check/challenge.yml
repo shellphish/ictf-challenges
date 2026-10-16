@@ -1,0 +1,20 @@
+name: Sanity check
+author: iCTF 2023 organizers
+category: simple
+description: 'The flag is posted in discord chanel.
+
+  '
+value: 50
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{NooBCheck}
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

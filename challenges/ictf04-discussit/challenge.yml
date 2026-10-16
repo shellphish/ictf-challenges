@@ -1,0 +1,59 @@
+name: 'UN Voting: Discussit Chat Service'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2004 — The UN Voting System**
+
+
+  A TCP chat/discussion service (iCTF 2004 — "Discuss It") implementing an
+
+  AI chatbot conversation. The service is a custom C daemon that stores
+
+  conversation topics as flags. The `discussit.c` daemon forks per connection
+
+  and communicates via a TCP protocol; the `chat.c` library handles the
+
+  AI conversation logic using word lists from the `words/` directory.
+
+
+  ## Source
+
+
+  Full C source extracted from the competition VM at `/home/discussit/`:
+
+  - `src/discussit.c` — main daemon (fork-per-connection, TCP port 7413)
+
+  - `src/chat.c` — AI chatbot logic (ALICE-style word-list matching)
+
+  - `src/main.dict` / `src/syn.dict` — dictionaries
+
+  - `src/words/` — ~100 topic word-list files
+
+  - `src/discussitd.sh` — startup script
+
+  - `src/discuss_bot.py` — scorebot interaction script
+
+  - `src/discussitScoringScript.py` — scoring script
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{discussit_pwned}
+files: []
+topics:
+- binary exploitation
+- network protocol
+- C daemon
+tags:
+- binary
+- tcp
+- c
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 7413

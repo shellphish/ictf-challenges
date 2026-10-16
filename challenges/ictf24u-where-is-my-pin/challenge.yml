@@ -1,0 +1,28 @@
+name: where_is_my_pin?
+author: iCTF 2024 organizers
+category: forensic
+description: 'I bought a robot that can do all the chores for me. I am not sure how
+  I did it but I somehow wiped my hard drive containing the pin to start it.
+
+
+  Can you retrieve it for me?
+
+  '
+value: 280
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf{I_4m_4ctua11y_wh4t_c4n_be_used_4s_th3_p1N_f0r_th3_r0b0t}
+files: []
+topics:
+- document forensics
+tags:
+- forensics
+- carving
+- file system
+- historical
+- attack-defense
+version: '0.1'

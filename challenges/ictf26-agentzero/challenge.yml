@@ -1,0 +1,23 @@
+name: AgentZero
+author: UCSB Security Lab
+category: web
+description: 'Meet **AgentZero** — a next-gen AI assistant with access to powerful
+  administrative vault tools. Rumour has it there''s a classified vault containing
+  something very sensitive...
+
+  '
+value: 500
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- flag: ictf{local_test_flag}
+  type: PLAINTEXT
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

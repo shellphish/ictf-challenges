@@ -1,0 +1,20 @@
+name: overflow-it
+author: zanardi
+category: AI
+description: 'Figure it out and get the flag.
+
+  '
+value: 500
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- iCTF{sometimes_italian_is_overflowing}
+files: []
+topics: []
+tags:
+- historical
+- attack-defense
+version: '0.1'

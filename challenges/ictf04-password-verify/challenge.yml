@@ -1,0 +1,69 @@
+name: 'UN Voting: Password Verify Daemon'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2004 — The UN Voting System**
+
+
+  A custom TCP password-verification daemon written in C (port 11111).
+
+  The service verifies user-provided passwords against a per-user dictionary
+
+  stored in `userdict/<username>`. The flag is stored as the "password" entry.
+
+
+  ## Protocol
+
+
+  Single-line protocol; the daemon forks per connection:
+
+  ```
+
+  STORE <username> <word> <flag>   — store a flag word
+
+  DICT <username> <password>       — verify password & return stored word
+
+  ```
+
+
+  ## Source
+
+
+  Full C source:
+
+  - `src/pwdvrfy.c` — daemon source (BUFSIZE 512, MAXWORD 64, fork-per-connection)
+
+  - `src/pwdvrfy` — compiled binary (Linux/i386)
+
+  - `src/pwdvrfy_bot.py` — scorebot interaction script
+
+  - `src/passwordVerifyScoringScript.py` — scoring script
+
+
+  Key vulnerability: `buffer[BUFSIZE]` read with no bounds check on command
+
+  parsing — classic stack buffer overflow in the `verify_password()` function.
+
+  '
+value: 0
+image: null
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{pwverify_pwned}
+files: []
+topics:
+- binary exploitation
+- network protocol
+- buffer overflow
+tags:
+- binary
+- tcp
+- c
+- bof
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 11111

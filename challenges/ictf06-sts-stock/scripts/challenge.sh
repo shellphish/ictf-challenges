@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf06-sts-stock"
+CHALLENGE_PORT=9000

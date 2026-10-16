@@ -1,0 +1,61 @@
+name: 'UN Voting: Diebald Voting Machine Admin'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2004 — The UN Voting System**
+
+
+  The Diebald service (a parody of Diebold voting machines) provides a
+
+  web interface to the UN voting system at `/~diebald/`. The `admin` CGI
+
+  binary (C source at `src/admin.c`) handles administrative operations
+
+  including creating tasks (flag storage). The flag is stored as task data.
+
+
+  ## Source
+
+
+  HTML/CSS frontend extracted from the competition VM (`/~diebald/`):
+
+  - `src/index.html` — landing page
+
+  - `src/products.html` — product page
+
+  - `src/diebald.css` — stylesheet
+
+
+  Admin CGI (C binary, symbols intact):
+
+  - `src/admin.c` — C source for the admin CGI backend
+
+
+  Scoring scripts:
+
+  - `src/diebold_bot.py` — scorebot interaction script
+
+  - `src/diebaldScoringScript.py` — scoring script
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{diebald_pwned}
+files: []
+topics:
+- web exploitation
+- CGI security
+- binary exploitation
+tags:
+- web
+- cgi
+- binary
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 80

@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf03-guestbook"
+CHALLENGE_PORT=80

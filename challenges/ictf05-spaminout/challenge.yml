@@ -1,0 +1,44 @@
+name: 'Spam World: Spam In/Out Gateway'
+author: Giovanni Vigna / UCSB Security Lab
+category: binary
+description: '**iCTF 2005 — The Spam Museum: Spam In/Out Gateway**
+
+
+  A pair of C programs: `spamin` (port 8008) receives spam via
+
+  `SPAM-IN-SPAM-OUT\n<filename>\n<content>` and writes content to files.
+
+  Multiple vulnerabilities: (1) `gets(filename)` buffer overflow on most
+
+  connections (`be` counter logic means `gets` is used when `be != 16`);
+
+  (2) `gets(flag)` always used (`bop=22 < 46` → always false branch);
+
+  (3) format string: `printf(banner)` with attacker-controlled input;
+
+  (4) path traversal: `fopen(filename, "a+")` writes to arbitrary files.
+
+  Full C source available.
+
+  '
+value: 0
+image: .
+protocol: tcp
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{spaminout_pwned}
+files: []
+topics:
+- binary exploitation
+- C network service
+tags:
+- binary
+- tcp
+- c
+- network
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

@@ -1,0 +1,73 @@
+name: Guestbook (guestbook)
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2005 — The Bass Tard Corporation**
+
+
+  The Bass Tard Corporation''s public guestbook service. Visitors can post
+
+  comments; the flag is stored as a private message using the keyword "PRIVATELY"
+
+  in a user''s guestbook entry.
+
+
+  The scorebot accessed entries at `/~guestbook/cgi-bin/guestbook.pl?user=<first>`
+
+  and posted new flags via an HTML form.
+
+
+  ## Vulnerability
+
+
+  `guestbook.pl` passes user input unsanitized to the shell:
+
+  ```perl
+
+  $command = "grep ${user} ${guestbook}";
+
+  $usercomments = `${command}`;
+
+  ```
+
+  The `$user` parameter is never sanitized — classic command injection. Shell
+
+  metacharacters in `user=` execute arbitrary commands.
+
+
+  ## Source
+
+
+  Source extracted from the competition VM (`/home/guestbook/public_html/cgi-bin/`):
+
+  - `src/guestbook.pl` — main guestbook CGI (command injection via `user` param)
+
+  - `src/guestbook_save.pl` — saves new guestbook entries
+
+  - `src/guestbook_reset.sh` — resets guestbook.txt to original
+
+  - `src/guestbook.txt` — guestbook data file (flag stored here)
+
+  - `src/guestbook.txt.orig` — original clean guestbook template
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2005{guestbook_compromised}
+files: []
+topics:
+- web exploitation
+- command injection
+tags:
+- web
+- perl
+- cgi
+- command-injection
+- ictf2005
+- historical
+- attack-defense
+version: '0.1'

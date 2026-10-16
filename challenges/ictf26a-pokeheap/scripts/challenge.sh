@@ -1,0 +1,2 @@
+CHALLENGE_NAME="ictf26a-pokeheap"
+CHALLENGE_PORT=9000

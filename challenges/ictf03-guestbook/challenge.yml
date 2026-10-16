@@ -1,0 +1,81 @@
+name: guestbook
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2003 — Windows Goes Open-Source**
+
+
+  guestbook was a Perl CGI web guestbook service. Flags were stored as
+
+  guestbook entries attributed to "Bill Gates" and retrievable through
+
+  the admin interface.
+
+
+  ## Architecture
+
+
+  - Admin interface: `/cgi-bin/guestbook_admin.pl` (POST login/password)
+
+  - Save endpoint: `/cgi-bin/save_messages_admin.pl`
+
+  - Flag embedded in the guestbook messages textarea as `(flagvalue)`
+
+
+  ## Scorebot interaction
+
+
+  The scorebot authenticated to the admin interface and replaced the
+
+  flag value in the "Bill Gates" message entry using regex substitution,
+
+  then re-posted the entire message body to save it.
+
+
+  ## Source (extracted from CTF VM — RedHat 9, Apache + mod_perl)
+
+
+  - `src/guestbook.pl` — Perl CGI that reads `./guestbook.txt` and renders it
+
+  - `src/save_message.pl` — Perl CGI that appends a new entry to `./guestbook.txt`
+
+  - `src/templates/` — HTML page templates (header.html, footer.html, index.html)
+
+
+  The flag is stored as a guestbook entry for "Bill Gates" in the format
+
+  `<b>Bill Gates</b> (##GUESTBOOK_FLAG##) wrote:`. The admin interface
+
+  (`guestbook_admin.pl`) authenticates with MD5 of the password, then renders
+
+  the entire guestbook.txt in a textarea. `save_messages_admin.pl` replaces the
+
+  file content with the submitted textarea body.
+
+
+  Source extracted from CTF VM (RedHat 9 VMware image, `/root/setup/guestbook/`).
+
+  All admin scripts and scorebot interaction scripts are present.
+
+  '
+value: 0
+image: .
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2003{guestbook_pwned}
+files: []
+topics:
+- web
+- perl cgi
+- authentication bypass
+tags:
+- web
+- perl
+- cgi
+- ictf2003
+- historical
+- attack-defense
+version: '0.1'
+port: 80

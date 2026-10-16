@@ -1,0 +1,61 @@
+name: 'UN Voting: Talkun Note Service'
+author: Giovanni Vigna / UCSB Security Lab
+category: web
+description: '**iCTF 2004 — The UN Voting System**
+
+
+  A custom C web server (`talkserver`) running on TCP port 8081 with HTTPS on
+
+  8083. The server provides a note-taking web application where users can log
+
+  in and store text notes; the flag is stored as note content.
+
+
+  ## Source
+
+
+  Full C source including custom TLS support via OpenSSL:
+
+  - `src/talkserver/talkserver.c` — main HTTP server (handles login, notes, documents)
+
+  - `src/libmydiag/mydiag.c` — diagnostic library
+
+  - `src/libzocket/zocket.c` — socket abstraction library
+
+  - `src/talkserver/talkserver.pem` — SSL certificate
+
+  - `src/untalk.py` — scorebot interaction script
+
+  - `src/talkunScoringScript.py` — scoring script
+
+
+  The server uses OpenSSL for HTTPS on port 8083. Note files stored as
+
+  plaintext on the filesystem — path traversal in document handling may allow
+
+  reading other users'' notes.
+
+  '
+value: 0
+image: null
+protocol: http
+host: null
+connection_info: null
+healthcheck: null
+flags:
+- ictf2004{talkun_pwned}
+files: []
+topics:
+- web exploitation
+- authentication bypass
+- custom C HTTP server
+tags:
+- web
+- c
+- tcp
+- ssl
+- ictf2004
+- historical
+- attack-defense
+version: '0.1'
+port: 8081
