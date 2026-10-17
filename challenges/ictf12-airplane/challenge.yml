@@ -12,7 +12,7 @@ description: '**iCTF 2012-2013 — SCADA Breakdown**
   Air traffic control SCADA service by Benjamin Caillat. Vulnerability: the system used CRC32 as a weak 'HMAC' (not cryptographic), allowing forged signed position updates. Also had RC4 key reuse. Security advisory: SEC-03-22-2013-DLF-17500.
 
 
-  Source not available in archive.
+  Source code available in `src/` (Python 2).
 
   '
 value: 0

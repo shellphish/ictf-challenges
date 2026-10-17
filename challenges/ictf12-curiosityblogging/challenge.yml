@@ -12,7 +12,7 @@ description: '**iCTF 2012-2013 — SCADA Breakdown**
   Critical infrastructure service with a blogging/web theme. Port 8089 (reused in iCTF 2015). Exact mechanics not preserved.
 
 
-  Source not available in archive.
+  Source code available in `src/` (JavaScript/Node.js).
 
   '
 value: 0

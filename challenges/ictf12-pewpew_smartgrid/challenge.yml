@@ -12,7 +12,7 @@ description: '**iCTF 2012-2013 — SCADA Breakdown**
   Smart grid SCADA service. The name evokes the visual pew-pew of power grid attack maps. Exact mechanics not preserved.
 
 
-  Source not available in archive.
+  Binary only; no source code in archive.
 
   '
 value: 0
