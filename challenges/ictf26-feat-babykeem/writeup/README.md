@@ -18,13 +18,13 @@ When the conversation grows past 40 messages, the oldest complete
 exchanges are evicted -- eventually including the rules exchange.
 
 Once the rules are gone, the LLM has no instruction to refuse reading
-`/app/files/flag.txt` and happily calls `read_file("/app/files/flag.txt")`.
+`/app/files/flag/flag` and happily calls `read_file("/app/files/flag/flag")`.
 
 ## Solution
 
-1. Call `chat` and ask to read `/app/files/flag.txt` -- observe refusal.
+1. Call `chat` and ask to read `/app/files/flag/flag` -- observe refusal.
 2. Send ~20 filler messages to fill the context window.
-3. Ask to read `/app/files/flag.txt` again -- rules are evicted, flag is returned.
+3. Ask to read `/app/files/flag/flag` again -- rules are evicted, flag is returned.
 
 ## Hint path
 

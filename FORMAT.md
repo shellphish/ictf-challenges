@@ -4,7 +4,7 @@ Challenges are formatted to work on the CTFd platform.
 
 Each challenge must have the following:
 
-* A `flag` directory with a `flag` file. The `flag` file contents are in the form `ictf{SOME_CONTENT}` where `SOME_CONTENT` is replaced with the flag specific to this challenge. The flag should NOT be `/flag.txt`. 
+* A `flag` directory with a `flag` file. The `flag` file contents are in the form `ictf{SOME_CONTENT}` where `SOME_CONTENT` is replaced with the flag specific to this challenge. The flag should NOT be `/flag/flag`. 
 * An `ro` directory which is read-only. If the directory is empty, it must contain a `.gitkeep` file.
 * An `rw` directory which is writable. If the directory is empty, it must contain a `.gitkeep` file.
 * A `src` directory containing the source code of the challenge as well as configuration files (e.g., `xinetd.conf`)

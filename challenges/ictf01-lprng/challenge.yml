@@ -6,7 +6,7 @@ description: |
   syslog() without sanitization, enabling a remote format string attack that
   overwrites the return address with a shellcode pointer.
 
-  Exploit the service to read /flag.txt.
+  Exploit the service to read /flag/flag.
 
   The exploit (LPRng-3.6.24-1.c) is provided as a reference.
 value: 200

