@@ -1,7 +1,8 @@
 # iCTF Challenges
 
 Historical and current challenges from the [iCTF](https://ictf.cs.ucsb.edu/) competition,
-organized by the UCSB Security Lab. This repository covers editions from 2003 to 2026.
+founded by Giovanni Vigna at UC Santa Barbara in 2001 and organized by
+[Shellphish](https://shellphish.net) since 2005. This repository covers editions from 2001 to 2026.
 
 All challenges follow the [CTFd](https://ctfd.io/) challenge format and are compatible
 with [pwn.college](https://pwn.college/) / DOJO.
@@ -30,25 +31,30 @@ See [FORMAT.md](FORMAT.md) for the full specification.
 
 | Prefix   | Year | Edition | Theme |
 |----------|------|---------|-------|
+| ictf01   | 2001 | iCTF 1  | Red Team / Blue Team |
+| ictf02   | 2002 | iCTF 2  | Treasure Hunt in Cyberspace |
 | ictf03   | 2003 | iCTF 3  | Windows Goes Open-Source |
-| ictf04   | 2004 | iCTF 4  | UN Vote |
-| ictf04r  | 2005 | iCTF 4 rematch | Bass Tard Corp |
-| ictf05   | 2005 | iCTF 5  | Spam Museum |
-| ictf06   | 2006 | iCTF 6  | Hillbilly Bank |
-| ictf07   | 2007 | iCTF 7  | Copyright Mafia |
+| ictf04   | 2004 | iCTF 4  | The 2004 United Nations Vote |
+| ictf04r  | 2005 | iCTF 4 rematch | The Bass Tard Corporation |
+| ictf05   | 2005 | iCTF 5  | The Spam Museum |
+| ictf06   | 2006 | iCTF 6  | The Hillbilly Bank |
+| ictf07   | 2007 | iCTF 7  | The Copyright Mafia |
 | ictf08   | 2008 | iCTF 8  | "24" (nuclear bomb) |
 | ictf09   | 2009 | iCTF 9  | Rise of the Botnet |
 | ictf10   | 2010 | iCTF 10 | Hit 'em Where it Hurts |
 | ictf11   | 2011 | iCTF 11 | Money Laundering |
+| ictf12   | 2013 | iCTF 12 | SCADA Breakdown |
 | ictf13   | 2013 | iCTF 13 | Nuke 'em |
+| ictf14   | 2015 | iCTF 14 | Large-scale Hacking |
 | ictf15   | 2015 | iCTF 15 | Crowdsourcing Evil |
+| ictf16   | 2017 | iCTF 16 | Shell We Play a Game? |
+| ictf19   | 2019 | iCTF 19 | The Grey Hat Nation |
 | ictf20   | 2020 | iCTF 20 | Abbey Road |
 | ictf23u  | 2023 | iCTF 23 undergrad | AI and Cybersecurity |
 | ictf23h  | 2023 | iCTF 23 high school | AI and Cybersecurity |
 | ictf24u  | 2024 | iCTF 24 undergrad | iCTF 2024 |
 | ictf24h  | 2024 | iCTF 24 high school | iCTF 2024 |
-| ictf26   | 2026 | iCTF 26 normal | AI Agents and Cybersecurity |
-| ictf26a  | 2026 | iCTF 26 agentish | AI Agents and Cybersecurity |
+| ictf26   | 2026 | iCTF 26 | AI Agents and Cybersecurity (normal + agentish tracks) |
 
 ## Running a challenge
 
